@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Nav from "./Nav";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import Add from "./Add";
+import Subtract from "./Subtract";
+import Card from "./Card";
+import MultipleChoice from "./MultipleChoice";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    // this.state = {
+
+    // }
+  }
+  render() {
+    return (
+      <div className="app">
+        <BrowserRouter>
+          <Nav />
+
+          <Switch>
+            <Route path="/add" render={({match}) => <Add />} />
+            <Route path="/subtract" render={({match}) => <Subtract />} />
+          </Switch>
+        </BrowserRouter>
+        <Card topNumber="4" bottomNumber="8" />
+        <MultipleChoice />
+      </div>
+    );
+  }
 }
 
 export default App;
