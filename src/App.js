@@ -55,7 +55,7 @@ class App extends React.Component {
             <Route path="/subtract" render={({match}) => <Discipline match={match} />} />
           </Switch>
         </BrowserRouter>
-        <Card topNumber={topCard} bottomNumber={bottomCard} sum={sum} />
+        {/* <Card topNumber={topCard} bottomNumber={bottomCard} sum={sum} /> */}
         <MultipleChoice />
       </div>
     );

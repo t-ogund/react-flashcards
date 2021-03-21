@@ -15,7 +15,7 @@ console.log(props)
                 <div id="top-section">
                     <h2 id="top-number">{this.props.topNumber}</h2>
                 </div>
-                <div id="operand-section">+</div>
+                <div id="operand-section">{this.props.operand.match.url[1].toLowerCase() === "s" ? "-" : "+"}</div>
                 <div id="bottom-section">
                     <h2 id="bottom-number">{this.props.bottomNumber}</h2>
                 </div>
