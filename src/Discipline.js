@@ -16,7 +16,7 @@ class Discipline extends React.Component {
         return(
             <React.Fragment>
             <h1>Let's Practice {this.props.match.url[1].toLowerCase() === "s" ? "Subtraction" : "Addition"}!</h1>
-            <Card operand={this.props} />
+            <Card operand={this.props} topNumber={this.props.topNumberProp}  bottomNumber={this.props.bottomNumberProp} />
             </React.Fragment>
         )
     }

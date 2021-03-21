@@ -51,8 +51,8 @@ class App extends React.Component {
           <Nav />
 
           <Switch>
-            <Route path="/add" render={({match}) => <Discipline match={match} />} />
-            <Route path="/subtract" render={({match}) => <Discipline match={match} />} />
+            <Route path="/add" render={({match}) => <Discipline match={match} topNumberProp={topCard} bottomNumberProp={bottomCard} />} />
+            <Route path="/subtract" render={({match}) => <Discipline match={match} topNumberProp={topCard} bottomNumberProp={bottomCard} />} />
           </Switch>
         </BrowserRouter>
         {/* <Card topNumber={topCard} bottomNumber={bottomCard} sum={sum} /> */}
