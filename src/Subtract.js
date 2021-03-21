@@ -11,7 +11,7 @@ class Subtract extends React.Component {
 
     render() {
         return(
-            <h1>Subtraction</h1>
+            <h1>Let's Practice Subtraction!</h1>
         ) 
     }
 }

@@ -5,7 +5,7 @@ class Card extends React.Component {
         super(props);
 console.log(props)
         // this.state = {
-
+        //     operand: "+"
         // }
     }
 
@@ -13,11 +13,11 @@ console.log(props)
         return(
             <div id="card">
                 <div id="top-section">
-                    <h2 id="top-number">4</h2>
+                    <h2 id="top-number">{this.props.topNumber}</h2>
                 </div>
                 <div id="operand-section">+</div>
                 <div id="bottom-section">
-                    <h2 id="bottom-number">4</h2>
+                    <h2 id="bottom-number">{this.props.bottomNumber}</h2>
                 </div>
             </div>
         )

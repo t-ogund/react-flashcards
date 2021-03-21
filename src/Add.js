@@ -11,7 +11,7 @@ console.log(props)
 
     render() {
         return(
-            <h1>Addition</h1>
+            <h1>Let's Practice Addition!</h1>
         )
     }
 }

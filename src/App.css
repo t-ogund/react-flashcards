@@ -75,4 +75,15 @@ a:visited {
   border: none;
   background-color: rgb(247, 187, 77);
   border-radius: 10px;
+  outline: none;
+}
+.choice:hover {
+  width: 100%;
+  padding: 10px;
+  margin: 2px;
+  border: none;
+  background-color: rgb(247, 187, 77);
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
 }
