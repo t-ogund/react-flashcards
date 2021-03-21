@@ -7,15 +7,17 @@ class MultipleChoice extends React.Component {
         // this.state = {
 
         // }
+        console.log(props)
     }
 
     render() {
+
         return(
             <div id="multi-choice-container">
-                <button className="choice">1</button>
-                <button className="choice">2</button>
-                <button className="choice">3</button>
-                <button className="choice">4</button>
+                <button className="choice">{this.props.choiceA}</button>
+                <button className="choice">{this.props.choiceB}</button>
+                <button className="choice">{this.props.choiceC}</button>
+                <button className="choice">{this.props.match.url[1] === "a" ? this.props.choiceDAddition : this.props.choiceDSubtraction }</button>
             </div>
         )
     }
