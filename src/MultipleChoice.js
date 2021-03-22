@@ -4,10 +4,31 @@ class MultipleChoice extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-
-        // }
+        this.state = {
+            score: 0,
+            isAnswered: false,
+            nextCard: null
+        }
         console.log(props)
+        console.log(this.props.choiceDAddition)
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e) {
+        const guess = e.target.textContent;
+        if (this.props.match.url[1] === "a" && guess == this.props.choiceDAddition) {
+            console.log("CORRECT!")
+            // this.props.topNumber();
+            // this.props.bottomNumber();
+            this.setState({
+                score: this.state.score += 1,
+                isAnswered: true
+                // nextCard: null
+            })
+            console.log(this.state.score)
+        } else {
+            console.log("Try again.")
+        }
     }
 
     render() {
@@ -67,8 +88,8 @@ shuffleSubtraction.forEach( (elem, i, arr, j = getRandomValueSubtract(i, arr.len
 console.log(shuffleSubtraction);
 // ['d', 'a', 'b', 'c']
 
-        const shuffledAdditionOptions = shuffleAddition.map(optionAdd => <button className="choice">{optionAdd}</button>)
-        const shuffledSubtractionOptions = shuffleSubtraction.map(optionSub => <button className="choice">{optionSub}</button>)
+        const shuffledAdditionOptions = shuffleAddition.map(optionAdd => <button onClick={this.handleClick} className="choice">{optionAdd}</button>)
+        const shuffledSubtractionOptions = shuffleSubtraction.map(optionSub => <button onClick={this.handleClick} className="choice">{optionSub}</button>)
 
         
 
@@ -81,4 +102,4 @@ console.log(shuffleSubtraction);
     }
 }
 
-export default MultipleChoice
+// export default MultipleChoice

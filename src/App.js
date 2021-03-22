@@ -18,32 +18,23 @@ class App extends React.Component {
     // }
   }
 
-  topNumber() {
-    const top = Math.floor(Math.random() * 10) + 1;
-    console.log(top)
-    return top
-  }
-  bottomNumber() {
-    const bottom = Math.floor(Math.random() * 10) + 1;
-    console.log(bottom)
-    return bottom
-  }
+  
   
 
   render() {
-    const topCard = this.topNumber()
-    const bottomCard = this.bottomNumber();
-    const sum = topCard + bottomCard;
-    const diff = topCard - bottomCard;
-    console.log("SUM: ", sum)
+    // const topCard = this.topNumber()
+    // const bottomCard = this.bottomNumber();
+    // const sum = topCard + bottomCard;
+    // const diff = topCard - bottomCard;
+    // console.log("SUM: ", sum)
     return (
       <div className="app">
         <BrowserRouter>
           <Nav />
 
           <Switch>
-            <Route path="/add" render={({match}) => <Discipline match={match} topNumberProp={topCard} bottomNumberProp={bottomCard} />} />
-            <Route path="/subtract" render={({match}) => <Discipline match={match} topNumberProp={topCard} bottomNumberProp={bottomCard} />} />
+            <Route path="/add" render={({match}) => <Discipline match={match} />} />
+            <Route path="/subtract" render={({match}) => <Discipline match={match} />} />
           </Switch>
         </BrowserRouter>
         {/* <Card topNumber={topCard} bottomNumber={bottomCard} sum={sum} /> */}
