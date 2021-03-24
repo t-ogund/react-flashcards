@@ -12,21 +12,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     console.log(props)
-
-    // this.state = {
-
-    // }
   }
 
   
   
 
   render() {
-    // const topCard = this.topNumber()
-    // const bottomCard = this.bottomNumber();
-    // const sum = topCard + bottomCard;
-    // const diff = topCard - bottomCard;
-    // console.log("SUM: ", sum)
     return (
       <div className="app">
         <BrowserRouter>
@@ -37,7 +28,6 @@ class App extends React.Component {
             <Route path="/subtract" render={({match}) => <Discipline match={match} />} />
           </Switch>
         </BrowserRouter>
-        {/* <Card topNumber={topCard} bottomNumber={bottomCard} sum={sum} /> */}
       </div>
     );
   }

@@ -3,12 +3,14 @@
   margin: 0 auto;
 }
 
-/* .nav {
-  border: 1px solid black;
-} */
-
 ul {
   padding: 0
+}
+
+.link {
+  color: white;
+  font-weight: 600;
+  letter-spacing: .2em
 }
 
 .li {
@@ -43,6 +45,10 @@ a:visited {
   margin-left: 2px;
 }
 
+#card-score-container {
+  display: flex;
+  justify-content: space-between;
+}
 
 #card {
   height: 300px;
@@ -61,6 +67,11 @@ a:visited {
 #operand-section {
   height: 10%;
   margin-left: 2em;
+}
+
+#score-box {
+  height: 200px;
+  width: 85px;
 }
 
 #multi-choice-container {

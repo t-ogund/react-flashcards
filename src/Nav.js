@@ -16,12 +16,12 @@ class Nav extends React.Component {
                 <ul className="nav-links">
                     <li id="left" className="li">
                         <Link to="/add">
-                            Addition
+                            <span className="link">Addition</span>
                         </Link>
                     </li>
                     <li id="right" className="li">
                         <Link to="/subtract">
-                            Subtraction
+                            <span className="link">Subtraction</span>
                         </Link>
                     </li>
                 </ul>

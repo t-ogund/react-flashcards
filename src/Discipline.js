@@ -7,11 +7,7 @@ class Discipline extends React.Component {
         super(props);
         console.log(props.match.url)
     }
-
     
-
-      
-
     render() {
         return(
             <React.Fragment>
